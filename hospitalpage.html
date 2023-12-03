@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="hospitalpage.css" />
+  <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+  <title>MedLink Services</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+
+      <!-- this div for heart animation -->
+      <div class="main_header">
+
+        <div class="center-div"></div>
+        <div class="nav__logo">MedLink Services</div>
+
+      </div>
+      <ul class="nav__links">
+        <li class="link"><a href="hospitalpage.html">Home </a></li>
+        <li class="link"><a href="locationForm.html">Beds availability</a></li>
+        <li class="link"><a href="appoint.html">Book Appointment </a></li>
+        <li class="link"><a href="Aboutus.html">About Us </a></li>
+        <li class="link"><a href="contactus.html">Contact Information</a></li>
+      </ul>
+      <button  style="background-color:#046585;"  class="btn1"><a style="color: white;"  href="login.html">Login / SignUp</a></button>
+    </nav>
+
+    <header class="header">
+
+      <div class="content">
+
+        <h1><span>Get Quick</span><br>Medical Services</h1>
+
+        <p>
+
+          In today's fast-paced world, access to prompt and efficient medical
+          services is of paramount importance. When faced with a medical
+          emergency or seeking immediate medical attention, the ability to
+          receive quick medical services can significantly impact the outcome
+          of a situation.
+
+        </p>
+
+        <div class="opt">
+
+          <input type="text" class="btn" placeholder="Enter Location" name="#">
+
+          <button class="btn">Find Hospital Beds</button>
+          <button class="btn">Consult Online</button>
+          <button class="btn"><a   style="color: white;"  href="patient.html">View Health Records</a></button>
+          <button class="btn">Buy Medicines</button>
+
+        </div>
+
+      </div>
+      <div class="image">
+
+        <span class="image__bg"></span>
+        <img src="hospitalimg/header-bg.png" alt="header image" />
+
+      </div>
+
+      <div class="image__content">
+        <div class="ac"></div>
+        <div class="details">
+          <h4>1520+</h4>
+          <p>Active Clients</p>
+
+        </div>
+
+
+      </div>
+    </header>
+  </div>
+</body>
+<style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        /* color: white; */
+    }
+    footer{
+      color: white;
+        background: #046585;
+        padding-top: 50px;
+    }
+    footer a{
+      color: white;
+    }
+    .footer-container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background:red;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: white;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: red;
+    }
+    .social-icons i:hover{
+        color: red;
+    }
+    .bottom-bar{
+        background: #27859f;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+</style>
+
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-content">
+          <h3>Contact Us</h3>
+          <p>FAQs</p>
+          <p>Post a query</p>
+          <p>Give Your Feedback</p>
+          <p>Phone:+91 8323676932</p>
+      </div>
+      <div class="footer-content">
+          <h3>Quick Links</h3>
+           <ul class="list">
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Consult online</a></li>
+              <li><a href="">Book Appointment</a></li>
+           </ul>
+      </div>
+      <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+           <li><a href=""><i class="fab fa-facebook"></i></a></li>
+           <li><a href=""><i class="fab fa-twitter"></i></a></li>
+           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+           <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+          </div>
+  </div>
+  <div class="bottom-bar">
+      <p style="color: aliceblue;">&copy; 2023 Medlink Services . All rights reserved</p>
+  </div>
+</footer>
+
+</html>
+
+<!-- beds available -> enter loaction -> list of hospitals with bed availability -> add patient details -->

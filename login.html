@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Poppins', sans-serif;
+            /* line-height: 15px; */
+        }
+        body {
+            display: flex;
+        }
+        #ram {
+            background-color: #1a8db4;
+            height: 100vh;
+            width: 50vw;
+        }
+        #shyam {
+            background-color: aliceblue;
+            height: 100vh;
+            width: 50vw;
+        }
+        #krishna {
+            height: 78vh;
+            background-color: azure;
+            margin-top: 11vh;
+            margin-left: 16vw;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+        }
+        #medlink {
+            height: 11vw;
+        }
+        #ima {
+            width: 100%;
+        }
+        #login {
+            margin-top: 11vh;
+            height: 78vh;
+            width: 34vw;
+        }
+        h1 {
+            justify-content: center;
+            padding-left: 7vw;
+            margin-left: 1.3vw;
+        }
+        input {
+            /* padding-left: 7vw;
+            padding-top: 2vh; */
+            margin-left: 3vw;
+            font-size: large;
+            text-align: center; /* Center-align text within the input field */
+        }
+        label {
+            margin-left: 3vw;
+        }
+
+        button{
+            margin-left: 6vw;
+            margin-top: 1vh;
+            justify-content: center;
+        }
+        #show{
+        /* margin-top: 20px; */
+        position: relative;
+            right: 25px;
+        }
+        #or{
+            margin-left: 8vw;
+        }
+        a{
+            margin-left: 3vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ram">
+        <div id="krishna">
+            <form action="#">
+                <img src="hospitalimg/medlink.jpg" alt="" id="medlink">
+                <br>
+                <h1>Log In</h1>
+                <br>
+                <label for="userid">Enter Mobile no Or Email Id</label>
+                <br>
+                <input type="text" id="userid" >
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <div style="display: flex;">
+                    <input type="password" id="password">
+                    <input type="checkbox" onclick="togglePasswordVisibility()" id="show"><p id="dika">
+                </div>
+                <br>
+                <button onclick="namaste()" class="btn bg-primary btn-lg"><a    style="color: white;" href="hospitalpage.html">Sign Up</a></button>
+                <br>
+                <br>
+                <div id="or">Or</div>
+                <a href="signup2.html">Don't have an account ? Sign Up</a>
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+    <div id="shyam">
+        <img src="hospitalimg/login.jpg" alt="" id="login">
+    </div>
+    <script>
+        function namaste() {
+            let userid = document.getElementById("userid").value;
+            let pass = document.getElementById("password").value;
+            let message = document.getElementById("message");
+            if (userid === "" && pass === "") {
+                message.innerHTML = "Enter username and password";
+            } else if (userid === "") {
+                message.innerHTML = "Enter username";
+            } else if (pass === "") {
+                message.innerHTML = "Enter password";
+            } else {
+                alert("Response submitted");
+                document.getElementById("userid").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("message").innerHTML = "";
+            }
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

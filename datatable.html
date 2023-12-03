@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+
+        <link rel="stylesheet" href="hospitalpage.css">
+        
+</head>
+<style>
+
+</style>
+
+<body>
+    
+    <h1> Dynamic Table</h1>
+    <div class="container">
+        <form action="#">
+            <table id="studentInfo" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th> S.No.</th>
+                        <th> Student Name</th>
+                        <th> Roll No.</th>
+                        <th>Month</th>
+                        <th>Mess Charges</th>
+                        <th>Room Charges</th>
+                        <th><button onclick="addRow()"> +</button></th>
+                        
+                    </tr>
+                <tbody id="tbody">
+
+                </tbody>
+
+                </thead>
+
+            </table>
+        </form>
+    </div>
+
+    <script>
+        console.log("When going gets tough,the tough gets going ");
+        let i = 0;
+        function updateSNo() {
+            const rows = document.querySelectorAll(".sn");
+            console.log(rows);
+            i = 0;
+            rows.forEach((row , index ) => {
+                i++;
+                console.log(index)
+                row.value = i;
+            });
+        }
+        
+        function removeRow() {
+            const td = event.target.parentNode; 
+            console.log(td);
+            console.log(event);
+            console.log(event.target);
+            const tr = td.parentNode; 
+            tr.remove(); 
+            updateSNo();
+
+        }
+
+        function addRow() {
+            const table = document.getElementById("tbody");
+            const newRow = document.createElement("tr");
+            const columns = ["S.No.", "Student Name", "Roll No.", "Month", "Mess Charges", "Room Charges"];
+
+            columns.forEach((col) => {
+                const cell = document.createElement("td");
+                const input_field = document.createElement("input");
+                input_field.type = "text";
+                input_field.placeholder = col;
+
+                if (col === "S.No.") {
+                    input_field.value = ++i;
+                    input_field.disabled = true;
+                    input_field.className = "sn"
+                }
+                cell.appendChild(input_field);
+                newRow.appendChild(cell);
+
+            });
+
+            const removeCell = document.createElement("td");
+            const removeBtn = document.createElement("input");
+            removeBtn.type = "button";
+            removeBtn.value = " - ";
+            removeBtn.addEventListener("click", ()=>{
+                removeRow(newRow.rowIndex);
+            });
+
+            removeCell.appendChild(removeBtn);
+            newRow.appendChild(removeCell);
+            table.appendChild(newRow);
+
+        }
+    </script>
+
+</body>
+
+</html>

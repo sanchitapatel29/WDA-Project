@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+        }
+        #ram {
+            background-color: #1a8db4;
+            height: 100vh;
+            width: 50vw;
+        }
+        #shyam {
+            background-color: aliceblue;
+            height: 100vh;
+            width: 50vw;
+        }
+        #krishna {
+            height: 100vh;
+            background-color: azure;
+            margin-top: 0vh;
+            margin-left: 16vw;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+        }
+        #medlink {
+            height: 11vw;
+        }
+        #login {
+            margin-top: 0vh;
+            height: 100vh;
+            width: 34vw;
+        }
+        h2 {
+            justify-content: center;
+            padding-left: 7vw;
+            margin-left: 1.3vw;
+        }
+        input {
+            /* margin-top: 0px; */
+            margin-left: 3vw;
+            font-size: medium;
+            text-align: center;
+        }
+        label {
+            margin-left: 3vw;
+        }
+        #userid, #password, #Cpassword {
+            width: 80%;
+        }
+        button {
+            margin-left: 6vw;
+            margin-top: 1vh;
+            justify-content: center;
+        }
+        #show {
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        #showLabel {
+            display: flex;
+            align-items: center;
+        }
+        #show{
+            position: relative;
+            right: 65px;
+        }
+        #showC{
+            position: relative;
+            right: 65px;
+        }
+        .gen{
+            display: inline;
+            margin-left: 50px;
+            font-size:medium;
+        }
+        h4{
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ram">
+        <div id="krishna">
+            <form action="#">
+                <img src="hospitalimg/medlink.jpg" alt="" id="medlink">
+                <br>
+                <h2>Sign Up</h2>
+                <br>
+                <label for="userid">Enter Name</label>
+                <br>
+                
+                <input type="text" id="userid" placeholder="Name">
+        <br>
+        <br>
+        <label for="userid">Enter Mobile no or Email Id</label>
+                        <br>
+                <input type="text" id="userid" placeholder="Mobile No or Email Id">
+                <br><br>
+                <label for="date">Date Of Birth</label>
+                <br>
+                <input type="date" name="date" id="date" placeholder="Date of birth">
+                <br><br>
+                <label for="Gender">Gender</label>
+                <br>
+                
+                <p class="gen">Male :</p> <input type="radio" name="gender" id="gender" >  <p class="gen">Female :</p> <input type="radio" name="gender" id="gender">
+                <br><br>
+                <label for="password">Create Password</label>
+                <br>
+                <div id="showLabel">
+                    <input type="password" id="password" placeholder="Password">
+                    <label for="show" id="showLabel" onclick="togglePasswordVisibility()">
+                        <input type="checkbox" id="show"> 
+                        
+                    </label>
+                </div><br>
+                <label for="Cpassword">Confirm Password</label>
+                <div id="showLabel">
+                    <input type="password" id="Cpassword" placeholder="Confirm Password">
+                    <label for="showC" id="showLabel" onclick="togglePasswordVisibility2()">
+                        <input type="checkbox" id="showC"> 
+                        
+                    </label>
+                </div><br>
+                
+                <button onclick="namaste()" class="btn bg-primary btn-lg"><a    style="color: white;" href="hospitalpage.html">Sign Up</a></button>
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+    <div id="shyam">
+        <img src="hospitalimg/login.jpg" alt="" id="login">
+    </div>
+    <script>
+        function namaste() {
+            let userid = document.getElementById("userid").value;
+            let pass = document.getElementById("password").value;
+            let message = document.getElementById("message");
+            if (userid === "" && pass === "") {
+                message.innerHTML = "Enter username and password";
+            } else if (userid === "") {
+                message.innerHTML = "Enter username";
+            } else if (pass === "") {
+                message.innerHTML = "Enter password";
+            } else {
+                alert("Response submitted");
+                document.getElementById("userid").value = "";
+                document.getElementById("password").value = "";
+                document.getElementById("Cpassword").value = "";
+                document.getElementById("message").innerHTML = "";
+            }
+        }
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+        function togglePasswordVisibility2() {
+            var passwordInput = document.getElementById("Cpassword");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+
+</html>

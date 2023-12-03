@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="hospitalpage.css">
+</head>
+<style>
+    .hoscont{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 40px;
+    }
+    .see-more{
+        position: absolute;
+        top: 60vh;
+        left: 12vw;
+    }
+</style>
+<body>
+
+    <nav>
+
+        <!-- this div for heart animation -->
+        <div class="main_header">
+  
+          <div class="center-div"></div>
+          <div class="nav__logo">MedLink Services</div>
+          
+        </div>
+  
+  
+        <ul class="nav__links">
+            
+          <li class="link"><a href="hospitalpage.html">Home </a></li>
+          <li class="link"><a href="locationForm.html">Beds availability</a></li>
+          <li class="link"><a href="appoint.html">Book Appointment </a></li>
+          <li class="link"><a href="Aboutus.html">About Us </a></li>
+          <li class="link"><a href="contactus.html">Contact Information</a></li>
+  
+        </ul>
+  
+        <button  style="background-color:#046585;"  class="btn1"><a style="color: white;"  href="login.html">Login / SignUp</a></button>
+  
+  
+      </nav>
+
+
+<div class="hoscont">
+    <div class="card" style="width: 18rem;">
+        <img src="hospitalimg/h1.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">17 Beds available</h5>
+          <p class="card-text">Address: 123, Gomti Nagar, Lucknow, Uttar Pradesh, India
+          </p>
+          <a href="patient.html" class="btn btn-primary">>></a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="hospitalimg/h2.jpeg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">MediCity Hospital</h5>
+          <p class="card-text">Address: 45, Hazratganj Road, Lucknow, Uttar Pradesh, India</p>
+          <a href="patient.html" class="btn btn-primary">>></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="hospitalimg/h3.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Eminent Care Hospital</h5>
+          <p class="card-text">Address: 78, Indira Nagar, Lucknow, Uttar Pradesh, India</p>
+          <a href="patient.html" class="btn btn-primary">>></a>
+        </div>
+    <button class="btn see-more bg-info">See More</button>
+     
+</body>
+</html>
