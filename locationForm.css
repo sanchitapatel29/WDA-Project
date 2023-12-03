@@ -1,0 +1,29 @@
+*{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.locationForm{
+    
+    text-align: center;
+    width: 500px;
+    
+}
+
+
+.enter-lcn{
+    align-items: center;
+}
+
+.locationForm{
+    margin: 8px;
+    padding: 8px;
+}
+.form-select{
+    margin-bottom: 12px;
+}
+
+
+
+
