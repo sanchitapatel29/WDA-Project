@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,203 +10,253 @@
     <link rel="stylesheet" href="location.css">
     <link rel="stylesheet" href="hospitalpage.css">
 </head>
+
 <body>
-        <nav>
-            
-            <!-- this div for heart animation -->
-            <div class="main_header">
-                
-                <div class="center-div"></div>
-                <div class="nav__logo">MedLink Services</div>
-                
-            </div>
-            
-            
-            <ul class="nav__links">
-    
-                <li class="link"><a href="hospitalpage.html">Home </a></li>
-                <li class="link"><a href="locationForm.html">Beds availability</a></li>
-                <li class="link"><a href="appoint.html">Book Appointment </a></li>
-                <li class="link"><a href="Aboutus.html">About Us </a></li>
-                <li class="link"><a href="contactus.html">Contact Information</a></li>
-                
-            </ul>
-    
-            <button  style="background-color:#046585;"  class="btn1"><a style="color: white;"  href="login.html">Login / SignUp</a></button>
-        </nav>
-        <div class="container">
+    <nav>
+
+        <!-- this div for heart animation -->
+        <div class="main_header">
+
+            <div class="center-div"></div>
+            <div class="nav__logo">MedLink Services</div>
+
+        </div>
+
+
+        <ul class="nav__links">
+
+            <li class="link"><a href="hospitalpage.html">Home </a></li>
+            <li class="link"><a href="locationForm.html">Beds availability</a></li>
+            <li class="link"><a href="appoint.html">Book Appointment </a></li>
+            <li class="link"><a href="Aboutus.html">About Us </a></li>
+            <li class="link"><a href="contactus.html">Contact Information</a></li>
+
+        </ul>
+
+        <button style="background-color:#046585;" class="btn1"><a style="color: white;" href="login.html">Login /
+                SignUp</a></button>
+    </nav>
+    <div class="container" style="display:flex; flex-direction:column">
+
+        <label for="states">States:</label>
+        <select id="states" onchange="fetchCities()" style="padding:5px">
+            <option value="states" disabled selected>Select States</option>
+            <option value="Uttar_Pradesh">Uttar Pradesh</option>
+            <option value="Madhya_Pradesh">Madhya Pradesh</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Chattisgarh">Chattisgarh</option>
+            <option value="Uttrakhand">Uttrakhand</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Himachal_Pradesh">Himachal Pradesh</option>
+            <!-- Add more cities as needed -->
+        </select>
+
+        <label for="city" style="margin-top: 20px;">Cities:</label>
+        <select id="city" style="padding:5px"></select>
         
-        <div class="locationForm">
-
-            <div class="enter-lcn"><h3>Enter your Location</h3>
-            </div>
-            <div class="location">
-                <select class="form-select" aria-label="Default select example">
-                    
-                        <option selected>India</option>
-                        <option value="1">India</option>
-                        <option value="2">England</option>
-                        <option value="3">New Zealand</option>
-                        <option value="4">Australia</option>
-
-                </select>
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>State</option>
-                    <option value="1">Uttar pradesh</option>
-                    <option value="2">Maharashtra</option>
-                    <option value="3">Punjab</option>
-                    <option value="5">Andra Pradesh</option>
-                    <option value="6">Delhi</option>
-                    <option value="7">Karnataka</option>
-                </select>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>City</option>
-                    <option value="1">Lucknow</option>
-                    <option value="2">Mumbai</option>
-                    <option value="3">Jalandhar</option>
-                    <option value="5">Hyderabad</option>
-                    <option value="6">South Delhi</option>
-                    <option value="7">Bangalore</option>
-                </select>
-            </div>
-            <br>
-            <button type="button" class="btn btn-primary"><a href="availhospital.html">Submit</a></button>
+        <div style="padding: 10px auto;">
+            <a href="availhospital.html" class="btn btn-primary btn-md" style="padding: 8px 15px; margin: 25px 190px; color: white; text-decoration: none;">Submit</a>
         </div>
-
-<footer>
-
-
-    <div class="footer-container">
-        <div class="footer-content">
-            <h3>Contact Us</h3>
-            <p>FAQs</p>
-            <p>Post a query</p>
-            <p>Give Your Feedback</p>
-            <p>Phone:+91 8323676932</p>
-        </div>
-        <div class="footer-content">
-            <h3>Quick Links</h3>
-             <ul class="list">
-                <li><a href="">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">Consult online</a></li>
-                <li><a href="">Book Appointment</a></li>
-             </ul>
-        </div>
-        <div class="footer-content">
-            <h3>Follow Us</h3>
-            <ul class="social-icons">
-             <li><a href=""><i class="fab fa-facebook"></i></a></li>
-             <li><a href=""><i class="fab fa-twitter"></i></a></li>
-             <li><a href=""><i class="fab fa-instagram"></i></a></li>
-             <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-            </div>
-    </div>
-    <div class="bottom-bar">
-        <p style="color: aliceblue;">&copy; 2023 Medlink Services . All rights reserved</p>
+        
     </div>
 
-</footer>
-<style>
-button a{
-    color: white;
-}
-footer{
-    width: 100vw;
-    position: absolute;
-    top: 80vh;
-    left: 0px;
-    color: white;
-        background: #046585;
-        padding-top: 50px;
-    }
-    footer a{
-        color: white;
-    }
-    .footer-container{
-        width: 1140px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-    .footer-content{
-        width: 33.3%;
-    }
-    h3{
-        font-size: 28px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .footer-content p{
-        width:190px;
-        margin: auto;
-        padding: 7px;
-    }
-    .footer-content ul{
-        text-align: center;
-    }
-    .list{
-        padding: 0;
-    }
-    .list li{
-        width: auto;
-        text-align: center;
-        list-style-type:none;
-        padding: 7px;
-        position: relative;
-    }
-    .list li::before{
-        content: '';
-        position: absolute;
-        transform: translate(-50%,-50%);
-        left: 50%;
-        top: 100%;
-        width: 0;
-        height: 2px;
-        background:red;
-        transition-duration: .5s;
-    }
-    .list li:hover::before{
-        width: 70px;
-    }
-    .social-icons{
-        text-align: center;
-        padding: 0;
-    }
-    .social-icons li{
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-    .social-icons i{
-        color: white;
-        font-size: 25px;
-    }
-    a{
-        text-decoration: none;
-    }
-    a:hover{
-        color: red;
-    }
-    .social-icons i:hover{
-        color: red;
-    }
-    .bottom-bar{
-        background: #27859f;
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
-    }
-    .bottom-bar p{
-        color: #343434;
-        margin: 0;
-        font-size: 16px;
-        padding: 7px;
-    }
+        <script>
+            
+            const cityData = {
+                Uttar_Pradesh: ['Lucknow', 'Kanpur', 'Prayagraj', 'Agra', 'Varanasi', 'Ghaziabad', 'Jhansi', 'Unnao', 'vrindavan'],
+                Madhya_Pradesh: ['Sagar', 'Bhopal', 'Beena', 'Ujjain', 'Jabalpur', 'Indore', 'Damoh'],
+                Bihar: ['Patna', 'Muzaffarnagar', 'Madhubani', 'Banka', 'Darbhanga'],
+                Maharastra: ['Mumbai', 'Pune', 'Nagpur', 'Akola', 'Amarvati', 'Washim'],
+                Gujarat: ['Ahemdabad', 'Vadodara', 'Rajkot', 'Gandhinagar', 'Surat', 'Bhuj', 'Mandvi'],
+                Rajasthan: ['Kota', 'Jaipur', 'Jodhpur', 'Udaipur', 'Bikaner', 'Alwar'],
+                Chattisgarh: ['Raipur', 'Bilaspur', 'Raigarh', 'Jashpur', 'Pratappur'],
+                Uttrakhand: ['Almora', 'Dehradun', 'Nainital', 'Rishikesh', 'Kashipur'],
+                Punjab: ['Amritsar', 'Jalandhar', 'Lundhiana', 'Patiala', 'Moga', 'Bhatinda'],
+                Himachal_Pradesh: ['Chamba', 'Manali', 'Rampur', 'Rajgarh', 'Mandi', 'Una']
+                // Add more states for each cities as needed
+            };
 
-</style>
+            function fetchCities() {
+                const stateDropdown = document.getElementById('states');
+                const cityDropdown = document.getElementById('city');
+                const selectedState = stateDropdown.value;
+
+                // Clear existing options in the city dropdown
+                cityDropdown.innerHTML = '';
+
+                cityData[selectedState].forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.text = city;
+                    cityDropdown.add(option);
+                });
+            }
+        </script>
+
+        <footer>
+
+
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h3>Contact Us</h3>
+                    <p>FAQs</p>
+                    <p>Post a query</p>
+                    <p>Give Your Feedback</p>
+                    <p>Phone:+91 8323676932</p>
+                </div>
+                <div class="footer-content">
+                    <h3>Quick Links</h3>
+                    <ul class="list">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Consult online</a></li>
+                        <li><a href="">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content">
+                    <h3>Follow Us</h3>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar">
+                <p style="color: aliceblue;">&copy; 2023 Medlink Services . All rights reserved</p>
+            </div>
+
+        </footer>
+        <style>
+            .container{
+                height: 100px;
+                width: 500px;
+                justify-content: space-between;
+                margin-top: 50px;
+
+
+            }
+            
+            button a {
+                color: white;
+            }
+
+            footer {
+                width: 100vw;
+                position: absolute;
+                top: 80vh;
+                left: 0px;
+                color: white;
+                background: #046585;
+                padding-top: 50px;
+            }
+
+            footer a {
+                color: white;
+            }
+
+            .footer-container {
+                width: 1140px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-content {
+                width: 33.3%;
+            }
+
+            h3 {
+                font-size: 28px;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .footer-content p {
+                width: 190px;
+                margin: auto;
+                padding: 7px;
+            }
+
+            .footer-content ul {
+                text-align: center;
+            }
+
+            .list {
+                padding: 0;
+            }
+
+            .list li {
+                width: auto;
+                text-align: center;
+                list-style-type: none;
+                padding: 7px;
+                position: relative;
+            }
+
+            .list li::before {
+                content: '';
+                position: absolute;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                top: 100%;
+                width: 0;
+                height: 2px;
+                background: red;
+                transition-duration: .5s;
+            }
+
+            .list li:hover::before {
+                width: 70px;
+            }
+
+            .social-icons {
+                text-align: center;
+                padding: 0;
+            }
+
+            .social-icons li {
+                display: inline-block;
+                text-align: center;
+                padding: 5px;
+            }
+
+            .social-icons i {
+                color: white;
+                font-size: 25px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            .social-icons i:hover {
+                color: red;
+            }
+
+            .bottom-bar {
+                background: #27859f;
+                text-align: center;
+                padding: 10px 0;
+                margin-top: 50px;
+            }
+
+            .bottom-bar p {
+                color: #343434;
+                margin: 0;
+                font-size: 16px;
+                padding: 7px;
+            }
+        </style>
 </body>
+
 </html>
